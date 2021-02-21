@@ -14,11 +14,11 @@ module.exports = {
   module: {
 
     // apply loaders to files that meet given conditions
-    loaders: [{
+    rules: [{
       test: /\.jsx?$/,
       include: path.join(__dirname, '/client/src'),
-      loader: 'babel',
-      query: {
+      loader: 'babel-loader',
+      options: {
         presets: ["react", "es2015"]
       }
     }],
